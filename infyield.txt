@@ -1,4 +1,4 @@
-﻿if IY_LOADED and not _G.IY_DEBUG then
+if IY_LOADED and not _G.IY_DEBUG then
 
 	return
 end
@@ -6453,7 +6453,7 @@ local TeleportCheck = false
 Players.LocalPlayer.OnTeleport:Connect(function(State)
 	if KeepInfYield and (not TeleportCheck) and queueteleport then
 		TeleportCheck = true
-		queueteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()")
+		queueteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/7Savitar/Obsidian/refs/heads/main/infyield.txt'))()")
 	end
 end)
 
