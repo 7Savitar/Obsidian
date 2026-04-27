@@ -224,7 +224,7 @@ local Library = {
         AccentColor = Color3.fromRGB(125, 85, 255),
         OutlineColor = Color3.fromRGB(40, 40, 40),
         FontColor = Color3.new(1, 1, 1),
-        Font = Font.fromEnum(Enum.Font.Gotham),
+        Font = Font.fromEnum(Enum.Font.Code),
 
         RedColor = Color3.fromRGB(255, 50, 50),
         DestructiveColor = Color3.fromRGB(220, 38, 38),
@@ -315,7 +315,7 @@ local Templates = {
         CornerRadius = 4,
         NotifySide = "Right",
         ShowCustomCursor = true,
-        Font = Enum.Font.Gotham,
+        Font = Enum.Font.Code,
         ToggleKeybind = Enum.KeyCode.RightControl,
         
         ShowMobileButtons = true,
@@ -6909,7 +6909,7 @@ function Library:CreateWindow(WindowInfo)
             if Icon then
                 TabIcon = New("ImageLabel", {
                     Image = Icon.Url,
-                    ImageColor3 = Icon.Custom and "WhiteColor" or "AccentColor",
+                    ImageColor3 = "AccentColor",
                     ImageRectOffset = Icon.ImageRectOffset,
                     ImageRectSize = Icon.ImageRectSize,
                     ImageTransparency = 0.5,
@@ -6918,6 +6918,7 @@ function Library:CreateWindow(WindowInfo)
                     SizeConstraint = IsCompact and Enum.SizeConstraint.RelativeXY or Enum.SizeConstraint.RelativeYY,
                     Parent = TabButton,
                 })
+                Library:AddToRegistry(TabIcon, { ImageColor3 = "AccentColor" })
             end
 
             table.insert(Library.TabButtons, {
@@ -7766,7 +7767,7 @@ function Library:CreateWindow(WindowInfo)
             if Icon then
                 TabIcon = New("ImageLabel", {
                     Image = Icon.Url,
-                    ImageColor3 = Icon.Custom and "WhiteColor" or "AccentColor",
+                    ImageColor3 = "AccentColor",
                     ImageRectOffset = Icon.ImageRectOffset,
                     ImageRectSize = Icon.ImageRectSize,
                     ImageTransparency = 0.5,
@@ -7774,6 +7775,7 @@ function Library:CreateWindow(WindowInfo)
                     SizeConstraint = IsCompact and Enum.SizeConstraint.RelativeXY or Enum.SizeConstraint.RelativeYY,
                     Parent = TabButton,
                 })
+                Library:AddToRegistry(TabIcon, { ImageColor3 = "AccentColor" })
             end
 
             table.insert(Library.TabButtons, {
