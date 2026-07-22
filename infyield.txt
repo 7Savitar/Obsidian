@@ -13171,9 +13171,7 @@ task.spawn(function()
 	end)
 
 	if success then
-		if currentVersion ~= latestVersionInfo.Version then
-			notify("Outdated", "Get the new version at infyiff.github.io")
-		end
+		-- Outdated bildirimi devre dışı bırakıldı
 
 		if latestVersionInfo.Announcement and latestVersionInfo.Announcement ~= "" then
 			local AnnGUI = Instance.new("Frame")
