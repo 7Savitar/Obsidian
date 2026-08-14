@@ -1187,7 +1187,7 @@ function Library:GetCustomIcon(IconName: string): any
     end
 
     if tonumber(IconName) then
-        IconName = string.format("rbxassetid://%.0f", tonumber(IconName))
+        IconName = string.format("rbxthumb://type=Asset&id=%.0f&w=150&h=150", tonumber(IconName))
     end
 
     if IsCustomAssetIcon(IconName, true) then
