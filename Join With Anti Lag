@@ -1,1 +1,23 @@
-workspace.CurrentCamera.FieldOfView = 120
+local Players = game:GetService("Players")
+local localPlayer = Players.LocalPlayer
+local playerGui = localPlayer:WaitForChild("PlayerGui")
+
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "ABC_ScreenGui"
+screenGui.ResetOnSpawn = false
+screenGui.Parent = playerGui
+
+local textLabel = Instance.new("TextLabel")
+textLabel.Name = "ABCLabel"
+textLabel.Parent = screenGui
+
+textLabel.Size = UDim2.new(0, 200, 0, 50)
+textLabel.Position = UDim2.new(0.5, 0, 0, 0)
+textLabel.AnchorPoint = Vector2.new(0.5, 0)
+
+textLabel.Text = "ABC"
+textLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+textLabel.TextSize = 28
+textLabel.Font = Enum.Font.SourceSansBold
+textLabel.BackgroundTransparency = 1
+textLabel.TextStrokeTransparency = 0.5
