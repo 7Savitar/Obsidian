@@ -1,11 +1,1 @@
-local Players = game:GetService("Players")
-local RunService = game:GetService("RunService")
 
-local localPlayer = Players.LocalPlayer
-local camera = workspace.CurrentCamera
-
-RunService.RenderStepped:Connect(function()
-    if camera then
-        camera.FieldOfView = 120
-    end
-end)
